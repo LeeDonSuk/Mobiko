@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모비꼬 - MIDI to MML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>모비꼬</h1>
+      <p class="subtitle">MIDI 파일을 MML로 변환하는 도구</p>
+    </header>
+
+    <main>
+      <div class="card">
+        <label for="midiInput" class="file-label">MIDI 파일 업로드</label>
+        <input type="file" id="midiInput" accept=".mid,.midi" />
+        <div class="button-group">
+          <button id="previewBtn" disabled>미리듣기</button>
+          <button id="convertBtn" disabled>변환</button>
+        </div>
+        <pre id="output">MIDI 파일을 업로드해주세요.</pre>
+      </div>
+    </main>
+  </div>
+
+  <!-- MIDI 파서 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/midi-parser-js@2.0.4/index.min.js"></script>
+</body>
+</html>
